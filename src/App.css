@@ -583,6 +583,18 @@ margin-left: 50px;
   }
 
 @media (max-width: 800px) {
+
+  body {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
     .conic {
         position: relative;
         width: 120px;
@@ -911,5 +923,29 @@ margin-left: 50px;
       box-shadow: 0 0 5px #777777, 0 0 15px #777777, 0 0 30px #777777,
         0 0 60px #777777;
     }
+    .App {
+
+      min-width: 50vw;
+      display: flex;
+      justify-content: left;
+  
+  
+      /* Stack elements vertically */
+      font-family: 'Poppins', sans-serif;
+  
+      height: 100vh;
+      -webkit-touch-callout: none;
+      /* iOS Safari */
+      -webkit-user-select: none;
+      /* Safari */
+      -khtml-user-select: none;
+      /* Konqueror HTML */
+      -moz-user-select: none;
+      /* Old versions of Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+      user-select: none;
+      /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
+  }
 
 }
