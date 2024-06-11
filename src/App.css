@@ -245,6 +245,8 @@ body {
     }
 }
 
+
+
 .selector {
     width: 300px;
 
@@ -656,18 +658,18 @@ margin-left: 50px;
         text-align: center;
         /* Center text */
     }
-
-    @media only screen and (max-device-width: 1000px) and (orientation: portrait) {
-      body {
-          transform: rotate(90deg);
-          transform-origin: left top;
-          width: 100vh;
-          overflow-x: hidden;
-          position: absolute;
-          top: 0;
-          left: 0;
-      }
-  }
   
 
+}
+
+@media only screen and (max-device-width: 1000px) and (orientation: portrait) {
+  body {
+      transform: rotate(90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
 }
