@@ -661,15 +661,15 @@ margin-left: 50px;
   
 
 }
-
-@media only screen and (max-device-width: 1000px) and (orientation: portrait) {
-  body {
-      transform: rotate(90deg);
-      transform-origin: left top;
-      width: 100vh;
-      overflow-x: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    height: 100vw;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
 }
