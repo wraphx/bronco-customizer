@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap");
 
+
+
+
+
 :root {
     --glow-color: hsl(186 100% 69%);
   }
@@ -582,370 +586,353 @@ margin-left: 50px;
     transform: scale(0.95);
   }
 
-  @media only screen and (orientation: portrait){
+  @media screen and (orientation: portrait){
 
-  body {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    height: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
-
-    .conic {
-        position: relative;
-        width: 120px;
-        height: 120px;
-        flex-shrink: 0;
-        border-radius: 50%;
-        /* background: #000; */
-        background-image: url('/options/wraphx.png');
-        background-size: 120px;
-        background-repeat: no-repeat;
-        background-position: center;
+    body {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+  }
+  
+      .conic {
+          position: relative;
+          width: 120px;
+          height: 120px;
+          flex-shrink: 0;
+          border-radius: 50%;
+          /* background: #000; */
+          background-image: url('/options/wraphx.png');
+          background-size: 120px;
+          background-repeat: no-repeat;
+          background-position: center;
+          margin: 10px;
+          margin-left: 15px;
+      }
+  
+      .configurator {
+          position: sticky;
+          min-width: 220px;
+          /* Occupy full width */
+          height: 100vh;
+          /* Adjusted height */
+          background-color: rgb(0, 0, 0);
+          padding-left: 25px;
+          padding-right: 1em;
+          padding-top: 17px;
+          overflow-y: scroll;
+          /* Add scroll if necessary */
+      }
+  
+      .configurator__section__title {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 10px;
+          margin-top: 10px;
+          color: white;
+          padding: 10px;
+      }
+  
+      .selector {
+          width: 150px;
+          font-size: 15px;
+      }
+  
+      .current-color {
+          font-size: 10px;
+      }
+  
+      .color-hex {
+  
+          margin-left: 55px;
+          font-size: 15px;
+          color: "white"
+      }
+  
+      .button {
+          display: inline-block;
+          outline: 0;
+          border: 0;
+          cursor: pointer;
+          will-change: box-shadow, transform;
+          background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #001eff 100%);
+          box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+          padding: 5px 10px;
+          /* Adjusted padding */
+          margin-top: 20px;
+          border-radius: 6px;
+          color: #ffffff;
+          font-size: 8px;
+          font-weight: bold;
+          text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+          transition: box-shadow 0.15s ease, transform 0.15s ease;
+          text-align: center;
+          /* Center text */
+      }
+  
+      .button-87 {
         margin: 10px;
-        margin-left: 15px;
-    }
-
-    .configurator {
-        position: sticky;
-        min-width: 220px;
-        /* Occupy full width */
-        height: 100vh;
-        /* Adjusted height */
-        background-color: rgb(0, 0, 0);
-        padding-left: 25px;
-        padding-right: 1em;
-        padding-top: 17px;
-        overflow-y: scroll;
-        /* Add scroll if necessary */
-    }
-
-    .configurator__section__title {
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 10px;
-        margin-top: 10px;
-        color: white;
-        padding: 10px;
-    }
-
-    .selector {
-        width: 150px;
-        font-size: 15px;
-    }
-
-    .current-color {
-        font-size: 10px;
-    }
-
-    .color-hex {
-
-        margin-left: 55px;
-        font-size: 15px;
-        color: "white"
-    }
-
-    .button {
-        display: inline-block;
-        outline: 0;
-        border: 0;
-        cursor: pointer;
-        will-change: box-shadow, transform;
-        background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #001eff 100%);
-        box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
-        padding: 5px 10px;
-        /* Adjusted padding */
-        margin-top: 20px;
-        border-radius: 6px;
-        color: #ffffff;
-        font-size: 8px;
-        font-weight: bold;
-        text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
-        transition: box-shadow 0.15s ease, transform 0.15s ease;
+        padding: 10px 30px;
+        margin-left: 10px;
         text-align: center;
-        /* Center text */
-    }
-
-    .button-87 {
-      margin: 10px;
-      padding: 10px 30px;
-      margin-left: 10px;
-      text-align: center;
-      text-transform: uppercase;
-      transition: 0.5s;
-      background-size: 200% auto;
-      color: white;
-      border-radius: 10px;
-      display: block;
-      border: 0px;
-      font-weight: 500;
-      font-size: 15px;
-      box-shadow: 0px 0px 14px -7px #f09819;
-      background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
-      cursor: pointer;
-      user-select: none;
-      -webkit-user-select: none;
-      touch-action: manipulation;
-    }
-
-    .glowing-btn {
-      position: relative;
-      color: var(--glow-color);
-      cursor: pointer;
-      padding: 0.35em 1em;
-      border: 0.15em solid var(--glow-color);
-      border-radius: 0.45em;
-      background: none;
-      perspective: 2em;
-      font-family: "Raleway", sans-serif;
-      font-size: 10px;
-      font-weight: 900;
-      letter-spacing: 0.5em;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        border-radius: 10px;
+        display: block;
+        border: 0px;
+        font-weight: 500;
+        font-size: 15px;
+        box-shadow: 0px 0px 14px -7px #f09819;
+        background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+  
+      .glowing-btn {
+        position: relative;
+        color: var(--glow-color);
+        cursor: pointer;
+        padding: 0.35em 1em;
+        border: 0.15em solid var(--glow-color);
+        border-radius: 0.45em;
+        background: none;
+        perspective: 2em;
+        font-family: "Raleway", sans-serif;
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 0.5em;
+      
+        -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+          0px 0px 0.5em 0px var(--glow-color);
+        -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+          0px 0px 0.5em 0px var(--glow-color);
+        box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+          0px 0px 0.5em 0px var(--glow-color);
+        animation: border-flicker 2s linear infinite;
+      }
+      
+      .glowing-txt {
+        float: left;
+        margin-right: -0.8em;
+        -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+          0 0 0.45em var(--glow-color);
+        -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+          0 0 0.45em var(--glow-color);
+        text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+        animation: text-flicker 3s linear infinite;
+      }
+      
+      .faulty-letter {
+        opacity: 0.5;
+        animation: faulty-flicker 2s linear infinite;
+      }
     
-      -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-        0px 0px 0.5em 0px var(--glow-color);
-      -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-        0px 0px 0.5em 0px var(--glow-color);
-      box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
-        0px 0px 0.5em 0px var(--glow-color);
-      animation: border-flicker 2s linear infinite;
+    
+      
+      .glowing-btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: -1;
+        background-color: var(--glow-color);
+        box-shadow: 0 0 2em 0.2em var(--glow-color);
+        transition: opacity 100ms linear;
+      }
+      
+      .glowing-btn:hover {
+        color: rgba(0, 0, 0, 0.8);
+        text-shadow: none;
+        animation: none;
+      }
+      
+      .glowing-btn:hover .glowing-txt {
+        animation: none;
+      }
+      
+      .glowing-btn:hover .faulty-letter {
+        animation: none;
+        text-shadow: none;
+        opacity: 1;
+      }
+      
+      .glowing-btn:hover:before {
+        filter: blur(1.5em);
+        opacity: 1;
+      }
+      
+      .glowing-btn:hover:after {
+        opacity: 1;
+      }
+    
+      .texture-images{
+        display: none;
+      }
+  
+      .btn-space {
+        padding-top: 1em;
     }
     
-    .glowing-txt {
-      float: left;
-      margin-right: -0.8em;
-      -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
-        0 0 0.45em var(--glow-color);
-      -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
-        0 0 0.45em var(--glow-color);
-      text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
-      animation: text-flicker 3s linear infinite;
+    .container {
+    
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        flex-direction: column; /* Change to column */
+        align-items: center; /* Center items horizontally */
     }
     
-    .faulty-letter {
-      opacity: 0.5;
-      animation: faulty-flicker 2s linear infinite;
+      .container .btn {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 150px;
+        height: 50px;
+        font-size: 12px;
+        margin: 0;
+        display: flex;
+        z-index: 0;
+      }
+      .container .btn a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 30px;
+        padding: 10px;
+        letter-spacing: 1px;
+        text-decoration: none;
+        overflow: hidden;
+        color: #fff;
+        font-weight: 400px;
+        z-index: 1;
+        transition: 0.5s;
+        backdrop-filter: blur(15px);
+      }
+      .container .btn:hover a {
+        letter-spacing: 3px;
+      }
+      .container .btn a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+        transform: skewX(45deg) translate(0);
+        transition: 0.5s;
+        filter: blur(0px);
+      }
+      .container .btn:hover a::before {
+        transform: skewX(45deg) translate(200px);
+      }
+      .container .btn::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        bottom: -5px;
+        width: 30px;
+        height: 10px;
+        background: #f00;
+        border-radius: 10px;
+        transition: 0.5s;
+        transition-delay: 0.5;
+      }
+      .container .btn:hover::before {
+        bottom: 0;
+        height: 50%;
+        width: 80%;
+        border-radius: 30px;
+      }
+      
+      .container .btn::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+        top: -5px;
+        width: 30px;
+        height: 10px;
+        background: #f00;
+        border-radius: 10px;
+        transition: 0.5s;
+        transition-delay: 0.5;
+      }
+      .container .btn:hover::after {
+        top: 0;
+        height: 50%;
+        width: 80%;
+        border-radius: 30px;
+      }
+      .container .btn:nth-child(1)::before, /* Button 1 */
+      .container .btn:nth-child(1)::after {
+        background: #fc9700;
+        box-shadow: 0 0 5px #fc9700, 0 0 15px #fc9700, 0 0 30px #fc9700,
+          0 0 60px #fc9700;
+      }
+      .container .btn:nth-child(2)::before, /* Button 2 */
+      .container .btn:nth-child(2)::after {
+        background: #ff0000;
+        box-shadow: 0 0 5px #ff0000, 0 0 15px #ff0000, 0 0 30px #ff0000,
+          0 0 60px #ff0000;
+      }
+      .container .btn:nth-child(3)::before, /* Button 3 */
+      .container .btn:nth-child(3)::after {
+        background: #0008ff;
+        box-shadow: 0 0 5px #0008ff, 0 0 15px #0008ff, 0 0 30px #0008ff,
+          0 0 60px #0008ff;
+      }
+      .container .btn:nth-child(4)::before, /* Button 4 */
+      .container .btn:nth-child(4)::after {
+        background: #0bd300;
+        box-shadow: 0 0 5px #0bd300, 0 0 15px #0bd300, 0 0 30px #0bd300,
+          0 0 60px #0bd300;
+      }
+      .container .btn:nth-child(5)::before, /* Button 5 */
+      .container .btn:nth-child(5)::after {
+        background: #f2ff00;
+        box-shadow: 0 0 5px #f2ff00, 0 0 15px #f2ff00, 0 0 30px #f2ff00,
+          0 0 60px #f2ff00;
+      }
+      .container .btn:nth-child(6)::before, /* Button 6 */
+      .container .btn:nth-child(6)::after {
+        background: #e400be;
+        box-shadow: 0 0 5px #e400be, 0 0 15px #e400be, 0 0 30px #e400be,
+          0 0 60px #e400be;
+      }
+      .container .btn:nth-child(7)::before, /* Button 7 */
+      .container .btn:nth-child(7)::after {
+        background: #777777;
+        box-shadow: 0 0 5px #777777, 0 0 15px #777777, 0 0 30px #777777,
+          0 0 60px #777777;
+      }
+      .App {
+  
+        min-width: 100vw;
+        display: flex;
+        justify-content: left;
+    
     }
   
-  
-    
-    .glowing-btn::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0;
-      z-index: -1;
-      background-color: var(--glow-color);
-      box-shadow: 0 0 2em 0.2em var(--glow-color);
-      transition: opacity 100ms linear;
-    }
-    
-    .glowing-btn:hover {
-      color: rgba(0, 0, 0, 0.8);
-      text-shadow: none;
-      animation: none;
-    }
-    
-    .glowing-btn:hover .glowing-txt {
-      animation: none;
-    }
-    
-    .glowing-btn:hover .faulty-letter {
-      animation: none;
-      text-shadow: none;
-      opacity: 1;
-    }
-    
-    .glowing-btn:hover:before {
-      filter: blur(1.5em);
-      opacity: 1;
-    }
-    
-    .glowing-btn:hover:after {
-      opacity: 1;
-    }
-  
-    .texture-images{
-      display: none;
-    }
-
-    .btn-space {
-      padding-top: 1em;
   }
-  
-  .container {
-  
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      flex-direction: column; /* Change to column */
-      align-items: center; /* Center items horizontally */
-  }
-  
-    .container .btn {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 150px;
-      height: 50px;
-      font-size: 12px;
-      margin: 0;
-      display: flex;
-      z-index: 0;
-    }
-    .container .btn a {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 30px;
-      padding: 10px;
-      letter-spacing: 1px;
-      text-decoration: none;
-      overflow: hidden;
-      color: #fff;
-      font-weight: 400px;
-      z-index: 1;
-      transition: 0.5s;
-      backdrop-filter: blur(15px);
-    }
-    .container .btn:hover a {
-      letter-spacing: 3px;
-    }
-    .container .btn a::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
-      transform: skewX(45deg) translate(0);
-      transition: 0.5s;
-      filter: blur(0px);
-    }
-    .container .btn:hover a::before {
-      transform: skewX(45deg) translate(200px);
-    }
-    .container .btn::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translatex(-50%);
-      bottom: -5px;
-      width: 30px;
-      height: 10px;
-      background: #f00;
-      border-radius: 10px;
-      transition: 0.5s;
-      transition-delay: 0.5;
-    }
-    .container .btn:hover::before {
-      bottom: 0;
-      height: 50%;
-      width: 80%;
-      border-radius: 30px;
-    }
-    
-    .container .btn::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translatex(-50%);
-      top: -5px;
-      width: 30px;
-      height: 10px;
-      background: #f00;
-      border-radius: 10px;
-      transition: 0.5s;
-      transition-delay: 0.5;
-    }
-    .container .btn:hover::after {
-      top: 0;
-      height: 50%;
-      width: 80%;
-      border-radius: 30px;
-    }
-    .container .btn:nth-child(1)::before, /* Button 1 */
-    .container .btn:nth-child(1)::after {
-      background: #fc9700;
-      box-shadow: 0 0 5px #fc9700, 0 0 15px #fc9700, 0 0 30px #fc9700,
-        0 0 60px #fc9700;
-    }
-    .container .btn:nth-child(2)::before, /* Button 2 */
-    .container .btn:nth-child(2)::after {
-      background: #ff0000;
-      box-shadow: 0 0 5px #ff0000, 0 0 15px #ff0000, 0 0 30px #ff0000,
-        0 0 60px #ff0000;
-    }
-    .container .btn:nth-child(3)::before, /* Button 3 */
-    .container .btn:nth-child(3)::after {
-      background: #0008ff;
-      box-shadow: 0 0 5px #0008ff, 0 0 15px #0008ff, 0 0 30px #0008ff,
-        0 0 60px #0008ff;
-    }
-    .container .btn:nth-child(4)::before, /* Button 4 */
-    .container .btn:nth-child(4)::after {
-      background: #0bd300;
-      box-shadow: 0 0 5px #0bd300, 0 0 15px #0bd300, 0 0 30px #0bd300,
-        0 0 60px #0bd300;
-    }
-    .container .btn:nth-child(5)::before, /* Button 5 */
-    .container .btn:nth-child(5)::after {
-      background: #f2ff00;
-      box-shadow: 0 0 5px #f2ff00, 0 0 15px #f2ff00, 0 0 30px #f2ff00,
-        0 0 60px #f2ff00;
-    }
-    .container .btn:nth-child(6)::before, /* Button 6 */
-    .container .btn:nth-child(6)::after {
-      background: #e400be;
-      box-shadow: 0 0 5px #e400be, 0 0 15px #e400be, 0 0 30px #e400be,
-        0 0 60px #e400be;
-    }
-    .container .btn:nth-child(7)::before, /* Button 7 */
-    .container .btn:nth-child(7)::after {
-      background: #777777;
-      box-shadow: 0 0 5px #777777, 0 0 15px #777777, 0 0 30px #777777,
-        0 0 60px #777777;
-    }
-    .App {
-
-      min-width: 50vw;
-      display: flex;
-      justify-content: right;
-  
-  
-      /* Stack elements vertically */
-      font-family: 'Poppins', sans-serif;
-  
-      height: 100vh;
-      -webkit-touch-callout: none;
-      /* iOS Safari */
-      -webkit-user-select: none;
-      /* Safari */
-      -khtml-user-select: none;
-      /* Konqueror HTML */
-      -moz-user-select: none;
-      /* Old versions of Firefox */
-      -ms-user-select: none;
-      /* Internet Explorer/Edge */
-      user-select: none;
-      /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
-  }
-
-}
