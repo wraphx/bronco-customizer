@@ -205,4 +205,4 @@ export function Bronco(props) {
   );
 }
 
-useGLTF.preload("/models/Bronco.glb");
+useGLTF.preload("/Bronco.glb");
