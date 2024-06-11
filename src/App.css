@@ -585,13 +585,13 @@ margin-left: 50px;
 @media (max-width: 800px) {
     .conic {
         position: relative;
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         flex-shrink: 0;
         border-radius: 50%;
         /* background: #000; */
         background-image: url('/options/wraphx.png');
-        background-size: 100px;
+        background-size: 120px;
         background-repeat: no-repeat;
         background-position: center;
         margin: 10px;
