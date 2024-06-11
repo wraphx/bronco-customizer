@@ -582,7 +582,7 @@ margin-left: 50px;
     transform: scale(0.95);
   }
 
-@media (max-width: 360px) {
+@media (max-width: 500px) {
 
   body {
     transform: rotate(-90deg);
@@ -925,7 +925,7 @@ margin-left: 50px;
     }
     .App {
 
-      min-width: 50vw;
+      min-height: 100vh;
       display: flex;
       justify-content: left;
   
