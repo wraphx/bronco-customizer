@@ -16,17 +16,17 @@ export default function App() {
         <Canvas shadows camera={{ position: [0, 0, 20], fov:40 }}>
           <color attach="background" args={['grey']} />
           <Suspense fallback={null}>
-          <Bronco scale={1.1} position={[0, -1, 0]} />
+          <Bronco scale={1.1} position={[0, 0, 0]} />
           </Suspense>
           <hemisphereLight intensity={0.5} />
-          <ContactShadows position={[0, -1, 0.0]} opacity={0.75} scale={10} blur={2.5} far={0.8} />
-          <ContactShadows resolution={1024} frames={1} position={[0, -1, 0]} scale={15} blur={0.8} opacity={0.5} far={10} />
+          <ContactShadows position={[0, 0, 0]} opacity={0.75} scale={20} blur={2.5} far={12.8} />
+        <ContactShadows resolution={1024} frames={1} position={[0, 0, 0]} scale={20} blur={1.5} opacity={0.5} far={25} />
           
           <ambientLight intensity={0.7} />
           <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
 
           {/* <Environment preset="city" /> */}
-          <Environment resolution={1024} files="/studio_small_08_2k.hdr" background ground={{ height: 35, radius: 100, scale: 25 }} backgroundBlurriness={50} backgroundIntensity={10}  environmentIntensity={30}>
+          <Environment resolution={1024} files="/future_parking_2k.hdr" background ground={{ height: 15, radius: 80, scale: 50 }} backgroundBlurriness={50} backgroundIntensity={10}  environmentIntensity={30}>
            
           </Environment>
          

@@ -61,7 +61,7 @@ export function Bronco(props) {
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.body.geometry}>
-        <meshStandardMaterial {...materials.BaseMtl} color={overlay==1 || overlay==13 ? (snap1.base.BaseMtl!=="none" ? snap1.base.BaseMtl : 0xffffff) : 0xffffff}>
+        <meshStandardMaterial {...materials.BaseMtl} color={overlay==1 || overlay==13 || overlay==34 ? (snap1.base.BaseMtl!=="none" ? snap1.base.BaseMtl : 0xffffff) : 0xffffff}>
           <canvasTexture
             flipY={false}
             wrapS={1000}
